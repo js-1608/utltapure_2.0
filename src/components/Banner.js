@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is included
 import { FaArrowRight } from 'react-icons/fa'; // Using react-icons for the arrow
-
+// import '../App.css'
 function Banner({ src, title, text, updated, buttonUrl, buttonText }) {
   return (
     <Card className="bg-dark text-white">
@@ -17,8 +17,8 @@ function Banner({ src, title, text, updated, buttonUrl, buttonText }) {
           </Card.Text>
           <Card.Text className='banner_title'>{updated}</Card.Text>
           {buttonUrl && (
-            <Button variant="light" href={buttonUrl} className=''>
-              {buttonText} <FaArrowRight />
+            <Button variant="light" href={buttonUrl} className='button'>
+              {buttonText} <FaArrowRight className='button_image' />
             </Button>
           )}
         </Container>

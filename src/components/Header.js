@@ -35,7 +35,7 @@ function Header() {
             <Nav.Link href="#link" className="nav-link-gap">Resources</Nav.Link>
             <Nav.Link href="#link" className="nav-link-gap">Insights</Nav.Link>
           </Nav>
-          <Button variant="outline-success">Book Demo</Button>
+          <Button variant="outline-success" className='hide'>Book Demo</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

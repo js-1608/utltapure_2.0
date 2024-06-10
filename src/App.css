@@ -7,7 +7,7 @@
   margin-right: 10px;
 }
 .nav-top-border{
-  border: 1px  solid rgb(1, 1, 1);
+  border: 1px  solid rgb(131, 123, 123);
 }
 .banner_title{
   font-weight: 600 !important;
@@ -32,17 +32,45 @@
 /* App.css */
 .heading-end {
   /* padding: 1rem; */
-  font-size: 2rem !important; /* Adjust as needed for responsiveness */
+  font-size: 1.7rem !important; /* Adjust as needed for responsiveness */
+  color:#636569;
 }
+.button{
+  display:flex !important;
+  width: fit-content;
 
+}
+.button_image{
+  margin: auto !important;
+  margin-left: 5px !important;
+
+}
 @media (max-width: 576px) {
   .heading-end {
     font-size: 1rem; /* Smaller font size for extra small devices */
   }
+  .hide{
+    display: none !important;
+  }
+  .logo{
+    margin:auto !important;
+  }
+  
 }
 
 @media (min-width: 768px) {
   .heading-end {
     font-size: 1.5rem; /* Larger font size for medium and larger devices */
   }
+ 
+}
+
+a{
+  color:#6D6E70 !important;
+}
+a:hover{
+  color: #1D9AD6 !important;
+}
+a:active{
+  color:90C03E !important;
 }
