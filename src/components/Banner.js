@@ -1,16 +1,27 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is included
+import { FaArrowRight } from 'react-icons/fa'; // Using react-icons for the arrow
 
-function Banner() {
+function Banner({ src, title, text, updated, buttonUrl, buttonText }) {
   return (
     <Card className="bg-dark text-white">
-      <Card.Img src="holder.js/100px270" alt="Card image" />
-      <Card.ImgOverlay>
-        <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </Card.Text>
-        <Card.Text>Last updated 3 mins ago</Card.Text>
+      <Card.Img src={src} alt="Card image" className='home_banner' />
+      <Card.ImgOverlay className="d-flex align-items-center justify-content-start">
+        <Container>
+          <Card.Title className="display-4 font-weight-bold banner_title">{title}</Card.Title>
+          <Card.Text>
+            {text}
+          </Card.Text>
+          <Card.Text className='banner_title'>{updated}</Card.Text>
+          {buttonUrl && (
+            <Button variant="light" href={buttonUrl} className=''>
+              {buttonText} <FaArrowRight />
+            </Button>
+          )}
+        </Container>
       </Card.ImgOverlay>
     </Card>
   );
